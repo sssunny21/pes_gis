@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://www.springframework.org/schema/jee 
+        http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd" >	
+	
+	<!-- 이노테이션을 사용하겠다고 선언하는거 -->
+	<mvc:annotation-driven />
+	
+	<!-- 해당 패키지 경로에 있는 모든 패키지에 있는 파일의 이노테이션을 스캔해서 빈으로 등록해주는 부분 -->
+	<context:component-scan base-package="bsns_test" />
+	
+	<!-- ? -->
+	<sec:global-method-security secured-annotations="enabled" />
+	
+	
+	
+	<!-- 17.07.07 pes tiles3 설정 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+    </bean>
+
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/views/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+	<!-- 
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property ref="dataSource" name="dataSource" />
+			SqlMapper 리스트
+		<property name="mapperLocations">
+		    <list>
+		        <value>classpath:sqlmap/**/*.xml</value>
+		    </list>
+		</property>
+	</bean> -->
+</beans>
+
+

@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+/* menu */
+#menu                                    { margin-top:20px; height:45px; border-top:1px solid #b9b9b9; border-bottom:1px solid #929292; z-index:40; }                                        
+#menu > ul                               { clear:both; margin:0 auto; list-style:none;}                                       
+#menu > ul > li                          { float:left; }                                     
+#menu > ul > li > a                      { display:block; height:45px; width:210px; text-align:center; font:bold 18px/45px "Malgun Gothic"; color:#3d3d3d; text-decoration:none;}                                     
+/*#menu > ul > li > a:hover                { color:#00a5e2; }*/  
+.menu_on                                { color:#00a5e2 !important;}
+.menu_disable                           { color:#CCCCCC !important;}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="mapLayout" template="/WEB-INF/views/template/template.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/layout/head.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/layout/menu.jsp" />
+        <put-attribute name="content" value="" />
+    </definition>
+    
+    <definition name="*/*" extends="mapLayout">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+    
+</tiles-definitions>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/** font **/
+@font-face {
+  font-family: 'nanumsquareR';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/NanumSquareR.eot");
+  src: url("../font/NanumSquareR.eot?#iefix") format('embedded-opentype'),
+       url("../font/NanumSquareR.woff") format('woff'),
+       url("../font/NanumSquareR.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'nanumsquareB';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/NnanumSquareB.eot");
+  src: url("../font/NnanumSquareB.eot?#iefix") format('embedded-opentype'),
+       url("../font/NnanumSquareB.woff2") format('woff2'),
+       url("../font/NnanumSquareB.woff") format('woff'),
+       url("../font/NnanumSquareB.ttf") format('truetype');
+}
+
+/** 기본설정 **/
+
+html, body {
+	overflow-x:hidden;
+	margin:0; padding:0;
+	font-family:'NnanumSquareB'; 
+	font-size:12px;
+	color:black;
+	height:100%;
+	}
+body, div, p, h1,h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend,
+input, textarea, blockquote, button, strong, em, address { vertical-align: baseline; font-family:'nanumsquareR';  font-weight:normal;font-size:14px;color:#555;}
+input, select {font-family:dotum;}
+
+h1, h2 ,h3, h4, h5, h6 {font-size: 100%; font-weight: normal; }
+
+img {  border:0 none;vertical-align:top }
+img, fieldset { padding: 0; border: none; }
+legend, caption { width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden; display: none; }
+input { background: none; border: 0; }
+input[type=checkbox]{width:14px;height:14px; border:1px solid #cecece; vertical-align:top;background:#fff;}
+input[type=radio]{width:12px;height:12px;vertical-align:top;background:#fff;}
+
+
+table {border:0; border-collapse: collapse; border-width:1px; border-spacing:0; }
+caption {position: absolute; overflow: hidden; width: 0; height: 0; font-size: 0; line-height: 0;}
+th, td {border-collapse:collapse;	border-width:1px;	color:#3c3c3c;}
+strong {font-weight:600;}
+address, em, cite {font-weight:normal; font-style:normal;}
+table th {font-weight:normal; vertical-align: middle;}
+table td {vertical-align: middle;}
+strong, em, address {font-style: normal; }
+
+q:before,q:after {content:"";}
+abbr,acronym {border:0; }
+.blind {overflow:hidden; visibility:hidden; position:absolute; width:0; height:0; font-size:0; line-height:0; }
+
+hr.ts10 {border:0; clear:both; display:block; height:10px; }
+hr.ts50 {border:0; position:relative; clear:both; display:block; height:50px; }
+a { text-decoration: none; background: 0 none; color: #333;}
+textarea { background: none; border: 0; }
+button{border:none;padding:0;margin:0;}
+input[type=submit], input[type=reset], button{cursor: pointer;}
+
+select::-ms-expand { display:none; }
+select {-webkit-appearance: none;}
