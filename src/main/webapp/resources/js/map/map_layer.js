@@ -163,3 +163,16 @@ var baseLayer_4 = new ol.layer.Tile({
 
 });
 
+//marker 스타일
+var iconStyle = new ol.style.Style({
+	image : new ol.style.Icon(
+	/** @type {olx.style.IconOptions} */
+	({
+		anchor : [ 0.5, 30 ],
+		anchorXUnits : 'fraction',
+		anchorYUnits : 'pixels',
+		opacity : 1,
+		crossOrigin : 'anonymous',
+		src : '../resources/images/blue_gis_off.png'
+	}))
+});

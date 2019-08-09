@@ -35,7 +35,7 @@ public class MapController {
 	 * @method_desc 주소검색 api 서비스
 	 * @returns 주소검색 api 서비스
 	 */
-	@RequestMapping(value = "/apiVworldCall", produces = "application/json", method = RequestMethod.POST)
+	@RequestMapping(value = "/apiVworldCall.do", produces = "application/json", method = RequestMethod.POST)
 	@ResponseBody
 	public JSONObject apiVworldCall(HttpServletRequest req) {
 		ObjectMapper mapper = new ObjectMapper();
@@ -79,7 +79,7 @@ public class MapController {
 						+ "&type=address&category=parcel&format=json&errorformat=json&key=25DE79AA-5074-3586-A909-70433B4EF531";
 			}
 			URL url = new URL(apiURL);
-			System.out.println("검색어 :" + map.get("text"));
+			//System.out.println("검색어 :" + map.get("text"));
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
 			
@@ -96,10 +96,10 @@ public class MapController {
 				response.append(inputLine);
 			}
 			br.close();
-			System.out.println("reponse.toString : "+response.toString());
+			
 			JSONParser parser = new JSONParser();
 			JSONObject json = (JSONObject) parser.parse(response.toString());
-			System.out.println("json:"+json);
+			
 			result = (JSONObject) json.get("response");
 
 		} catch (Exception e) {
